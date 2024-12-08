@@ -53,7 +53,7 @@ resource "azurerm_linux_web_app" "yanalwa" {
 }
 
 resource "azurerm_mssql_server" "sqlserverybg" {
-  name                         = var.sql_server_name
+  name                         = "${var.sql_server_name}-${random_integer.ri.result}"
   resource_group_name          = azurerm_resource_group.yanarg.name
   location                     = azurerm_resource_group.yanarg.location
   version                      = "12.0"
