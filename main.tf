@@ -8,7 +8,7 @@ terraform {
   backend "azurerm" {
     resource_group_name  = "StorageRG"
     storage_account_name = "taskboardstorageybg"
-    container_name       = "taskboardstorageybg"
+    container_name       = "taskboardstorageybgcontainer"
     key                  = "terraform.tfstate"
   }
 }
